@@ -1,7 +1,10 @@
 {
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^5.2.1",
-    "react-router-dom": "^7.9.6"
+  "name": "my-store-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "cd client && npm run build",
+    "dev": "cd client && npm run dev",
+    "preview": "cd client && npm run preview"
   }
 }
