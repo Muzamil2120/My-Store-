@@ -10,7 +10,7 @@ import { ReactQueryProvider } from "./context/ReactQueryProvider";
 import PageTransition from "./components/PageTransition";
 import FavoriteProvider from "./context/FavoriteContext";
 import SplashScreen from "./components/SplashScreen";
-
+import { Navigate } from "react-router-dom";
 import { useState } from "react";
 
 export default function App() {
@@ -31,6 +31,7 @@ export default function App() {
                   <Route path="/products" element={<Products />} />
                   <Route path="/product/:id" element={<ProductDetails />} />
                   <Route path="/cart" element={<Cart />} />
+                  <Route path="*" element={<Navigate to="/" />} />
                 </Routes>
               </PageTransition>
               <Footer />
@@ -41,3 +42,4 @@ export default function App() {
     </ReactQueryProvider>
   );
 }
+// Important for SPA routing
